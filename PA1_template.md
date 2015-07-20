@@ -1,8 +1,3 @@
----
-output:
-  html_document:
-    keep_md: yes
----
 # Reproducible Research: Peer Assessment 1
 
 ```r
@@ -31,7 +26,7 @@ mean_median_plot <- function(activity) {
   daily_mean<-mean(daily_sum$Total.Steps, na.rm=T)
   daily_median<-median(daily_sum$Total.Steps, na.rm=T)
   
-  print( qplot(daily_sum$Date, daily_sum$Total.Steps, geom="histogram", stat="identity",
+  print( qplot(daily_sum$Total.Steps, geom="histogram",
                ylab="Total Steps", xlab="Date (2012)") )
   list(daily.mean=daily_mean, daily.median=daily_median)
 }
