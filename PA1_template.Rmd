@@ -24,7 +24,7 @@ mean_median_plot <- function(activity) {
   daily_median<-median(daily_sum$Total.Steps, na.rm=T)
   
   print( qplot(daily_sum$Total.Steps, geom="histogram",
-               ylab="Total Steps", xlab="Date (2012)") )
+               ylab="Total Steps", xlab="Steps taken per day") )
   list(daily.mean=daily_mean, daily.median=daily_median)
 }
 
